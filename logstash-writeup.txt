@@ -1,0 +1,11 @@
+Logstash conf files follow the basic pattern of input{} filter{] output{}. One option for input is to get it from filebeats by listening to port 5044. Another option is to get it from a static file by using the file plugin and specifying the filepath.
+In this scenario, log data is ingested via the beats plugi.
+
+There are several filters applied to the logline:
+-- we must format the date
+-- remove double quotes
+-- perform a lookup on severity and assign the comparable string value to the interger in the log data
+-- remove the unused fields
+-- and output to the console.
+
+The the output is sent to the console in json format. Another option that was helpful during the development stage was rubydebug.  
