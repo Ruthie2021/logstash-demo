@@ -1,0 +1,6 @@
+filebeat.inputs:
+- type: log
+  paths:
+    - /Users/RPeters/Downloads/filebeat-7.15.0-darwin-x86_64/new-sample.log 
+output.logstash:
+  hosts: ["localhost:5044"]
